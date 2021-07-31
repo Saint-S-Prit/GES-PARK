@@ -1,0 +1,194 @@
+<section class="section">
+    <div class="card">
+        <div class="card-header">
+            Nouveau conducteur
+        </div>
+            <div class="card-body">
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form form-horizontal" [formGroup]="driverform" (ngSubmit)="addDriver()">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text" class="form-control"
+                                                         placeholder="Prénom"
+                                                         id="firstname"
+                                                         formControlName="firstname">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-person"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text"
+                                                        class="form-control"
+                                                        placeholder="Nom"
+                                                        id="lastname"
+                                                        formControlName="lastname">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-person"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-12">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text"
+                                                        class="form-control"
+                                                        placeholder="Email"
+                                                        id="email"
+                                                        formControlName="email">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-person"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text"
+                                                        class="form-control"
+                                                        placeholder="Mobile"
+                                                        id="phone"
+                                                        formControlName="phone">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-phone"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Lieu"
+                                                            id="address"
+                                                            formControlName="address">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-person"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text"
+                                                        class="form-control"
+                                                        placeholder="date du permis"
+                                                        id="dateLicense"
+                                                        formControlName="dateLicense">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-phone"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="file"
+                                                        class="form-control"
+                                                        placeholder="copy du permis"
+                                                        id="licenseFile"
+                                                        (change)="onFilelicense($event)">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-person"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <input type="text"
+                                                        class="form-control"
+                                                        placeholder="Numéro CIN"
+                                                        id="cin"
+                                                        formControlName="cin">
+                                                        <div class="form-control-icon">
+                                                            <i class="bi bi-person"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <fieldset class="form-group">
+                                                            <select class="form-select"
+                                                            formControlName="natureLicense"
+                                                            id="natureLicense">
+                                                                   <option value="">Choose your city</option>
+                                                                    <option *ngFor="let permis of permis" [ngValue]="permis">{{permis}}</option>
+                                                            </select>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group has-icon-left">
+                                                    <div class="position-relative">
+                                                        <fieldset class="form-group">
+                                                            <select class="form-select"
+                                                            formControlName="vehicle"
+                                                            id="vehicle">
+                                                                   <option value="">Vehicule</option>
+                                                                    <option *ngFor="let vehicle of vehicles" [ngValue]="vehicle">{{vehicle}}</option>
+                                                            </select>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 d-flex justify-content-end">
+                                                <button type="submit"
+                                                    class="btn btn-primary me-1 mb-1">Enregister</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 uploardFile">
+                                        <div class="row">
+                                            <div class="col-md-6 m-auto">
+                                                <div id="uploardFile"><img  class="d-block w-50 m-auto uploardFileImage" src="assets/images/faces/1.jpg" alt="" srcset=""></div>
+                                                    <div class="col-md-6  m-auto uploardFileInput">
+                                                        <div class="form-group has-icon-left">
+                                                            <div class="position-relative">
+                                                                <input type="file"
+                                                                class="form-control"
+                                                                placeholder="copy du permis"
+                                                                id="avatar"
+                                                                (change)="onFileAvatar($event)">
+                                                                <div class="form-control-icon">
+                                                                    <i class="bi bi-person"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+{{ driverform.value | json}}

@@ -1,0 +1,33 @@
+<section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            Les assurances
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped" id="table1">
+                                <thead>
+                                    <tr>
+                                        <th>Nom Agence</th>
+                                        <th>Téléphone</th>
+                                        <th>prix</th>
+                                        <th>Date faite</th>
+                                        <th>Date Expire</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let insurance of insurances; let index = index;">
+                                        <td>{{ insurance.agence }}</td>
+                                        <td>{{ insurance.number }}</td>
+                                        <td>{{ insurance.cost }}</td>
+                                        <td>{{ insurance.insuranceDate }}</td>
+                                        <td>{{ insurance.insuranceExpire }}</td>
+                                        <td>
+                                            <div _ngcontent-ceh-c16="" class="avatar avatar-xl"><img [src]='insurance.invoice' /></div>
+                                        </td>
+                                    </tr>                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>

@@ -1,0 +1,158 @@
+<div *ngIf="driver">
+    <div class="card-header">
+        <h4>conducteur - {{ driver.codeUser }}</h4>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xl-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Profile Conducteur</h4>
+                    <img [src]='driver.avatar' class="d-block w-25 m-auto" alt="driver.avatar">
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <p class="font-bold ms-3 mb-0">Prénom</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.firstname }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Nom</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.lastname }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Téléphone</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.phone }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Adresse</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.address }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Code identifiant</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.codeUser }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Numéro CIN</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.cin }}</p>
+                        </div>
+                    </div>
+                </div>licenseFile
+            </div>
+        </div>
+        <div class="col-12 col-xl-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Profile Conducteur</h4>
+                    <img [src]='driver.vehicle.cartRegistration' class="d-block w-25 m-auto" alt="driver.vehicle.cartRegistration">
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Code identifiant</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.vehicle.codeVehicle }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Marque</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.vehicle.mark }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Modèle</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.vehicle.modele }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Color</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.vehicle.color }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Nombre de places</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.vehicle.numbPlace }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Localisation</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ driver.vehicle.location }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

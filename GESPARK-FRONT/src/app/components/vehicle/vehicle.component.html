@@ -1,0 +1,36 @@
+<section class="section">
+    <div class="card">
+        <div class="card-header">
+            <a class="nav-link" routerLink="add/new">Add</a>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped" id="table1">
+                <thead>
+                    <tr>
+                        <th>Modèle</th>
+                        <th>Marque</th>
+                        <th>Couleur</th>
+                        <th>Nbr places</th>
+                        <th>Position</th>
+                        <th>Nature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let vehicle of vehicles; let index = index;">
+                            <td>{{ vehicle.modele }}</td>
+                            <td>{{ vehicle.mark }}</td>
+                            <td>{{ vehicle.color }}</td>
+                            <td>{{ vehicle.numbPlace }}</td>
+                            <td>{{ vehicle.location }}</td>
+                            <td>{{ vehicle.nature }}</td>
+                            <td>
+                                <a [routerLink]="[vehicle.codeVehicle]"><i _ngcontent-lgg-c16="" class="iconly-boldShow"></i></a>
+                            </td>
+                        
+                    </tr>                                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>

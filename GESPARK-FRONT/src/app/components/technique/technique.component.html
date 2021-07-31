@@ -1,0 +1,35 @@
+<section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            Les assurances
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped" id="table1">
+                                <thead>
+                                    <tr>
+                                        <th>Nom Agence</th>
+                                        <th>Téléphone</th>
+                                        <th>Prix</th>
+                                        <th>Nature</th>
+                                        <th>Date faite</th>
+                                        <th>Date Expire</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let technique of techniques; let index = index;">
+                                        <td>{{ technique.agence }}</td>
+                                        <td>{{ technique.numberAgence }}</td>
+                                        <td>{{ technique.cost }}</td>
+                                        <td>{{ technique.nature }}</td>
+                                        <td>{{ technique.dateVisite }}</td>
+                                        <td>{{ technique.techniqueExpire }}</td>
+                                        <td>
+                                            <div _ngcontent-ceh-c16="" class="avatar avatar-xl"><img [src]='technique.invoice' /></div>
+                                        </td>
+                                    </tr>                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>

@@ -1,0 +1,92 @@
+<div *ngIf="vehicle">
+    <div class="card-header">
+        <h4>Détail véhicle - {{ vehicle.codeVehicle }}</h4>
+    </div>
+    <div class="row">
+        <div class="col-12 col-xl-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Code identifiant</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ vehicle.codeVehicle }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Marque</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ vehicle.mark }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Modèle</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ vehicle.modele }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Color</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ vehicle.color }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Nombre de places</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ vehicle.numbPlace }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                
+                                <p class="font-bold ms-3 mb-0">Localisation</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-0">{{ vehicle.location }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <a routerLink="conducteur" class="btn btn-outline-info">Conducteur</a>
+                <a routerLink="carte-a-grise" class="btn btn-outline-warning">Carte à grise</a>
+                <a routerLink="assurance" class="btn btn-outline-primary">Assuance</a>
+                <a href="#" class="btn btn-outline-success">Success</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-6">
+
+            <div class="card">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

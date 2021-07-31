@@ -1,0 +1,74 @@
+<div *ngIf="vehicle.driver != null ">
+    <div class="card-header">
+        <h4>Détail conducteur - {{ vehicle.driver.codeUser }}</h4>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        
+                            <p class="font-bold ms-3 mb-0">Identifiant conduceur</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">{{ vehicle.driver.codeUser }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        
+                            <p class="font-bold ms-3 mb-0">Prénom</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">{{ vehicle.driver.firstname }}</p>
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        
+                            <p class="font-bold ms-3 mb-0">Nom</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">{{ vehicle.driver.lastname }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        
+                            <p class="font-bold ms-3 mb-0">Téléphone</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">{{ vehicle.driver.phone }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        
+                            <p class="font-bold ms-3 mb-0">Adresse</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">{{ vehicle.driver.address }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        
+                            <p class="font-bold ms-3 mb-0">type de permis</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">{{ vehicle.driver.natureLicense }}</p>
+                </div>
+            </div>
+        </div>
+    </div>

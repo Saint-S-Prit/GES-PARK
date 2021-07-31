@@ -1,0 +1,26 @@
+<div *ngIf="insurances">
+    <div class="card-body">
+        <table class="table table-striped" id="table1">
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>N° Téléphone</th>
+                    <th>Date fait</th>
+                    <th>Date Expire</th>
+                    <th>Prix</th>
+                    <th>Nature</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let insurance of insurances; let index = index;">
+                        <td>{{ insurance.agence }}</td>
+                        <td>{{ insurance.number }}</td>
+                        <td>{{ insurance.insuranceDate | date:'h:mm' }}</td>
+                        <td>{{ insurance.insuranceExpire | date:'h:mm' }}</td>
+                        <td>{{ insurance.cost }}</td>
+                        <td>{{ insurance.nature }}</td>
+                </tr>                                   
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div *ngIf="drivers">
+    <section class="section">
+        <div class="card">
+            <div class="card-header">
+                <h4>les conducteurs</h4>
+                <a class="nav-link" routerLink="add/new">Add</a>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped" id="table1">
+                    <thead>
+                        <tr>
+                            <th>Prnom et Nom</th>
+                            <th>Téléphone</th>
+                            <th>lieu</th>
+                            <th>Permis</th>
+                            <th>identifiant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let driver of drivers; let index = index;">
+                                <td>{{ driver.firstname }} {{ driver.lastname }}</td>
+                                <td>{{ driver.phone }}</td>
+                                <td>{{ driver.address }}</td>
+                                <td>{{ driver.natureLicense }}</td>
+                                <td>{{ driver.codeUser }}</td>
+                                <td>
+                                    <a [routerLink]="[driver.codeUser]"><i _ngcontent-lgg-c16="" class="iconly-boldShow"></i></a>
+                                </td>
+                            
+                        </tr>                                   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
