@@ -1,0 +1,37 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DoctrineMigrations;
+
+use Doctrine\DBAL\Schema\Schema;
+use Doctrine\Migrations\AbstractMigration;
+
+/**
+ * Auto-generated Migration: Please modify to your needs!
+ */
+final class Version20210715191141 extends AbstractMigration
+{
+    public function getDescription(): string
+    {
+        return '';
+    }
+
+    public function up(Schema $schema): void
+    {
+        // this up() migration is auto-generated, please modify it to your needs
+        $this->addSql('ALTER TABLE accident CHANGE accident_date accident_date DATETIME NOT NULL');
+        $this->addSql('ALTER TABLE insurance CHANGE insurance_date insurance_date DATETIME NOT NULL, CHANGE insurance_expire insurance_expire DATETIME NOT NULL');
+        $this->addSql('ALTER TABLE maintenance CHANGE maintenance_date maintenance_date DATETIME NOT NULL');
+        $this->addSql('ALTER TABLE technique CHANGE date_visite date_visite DATETIME NOT NULL, CHANGE technique_expire technique_expire DATETIME NOT NULL');
+    }
+
+    public function down(Schema $schema): void
+    {
+        // this down() migration is auto-generated, please modify it to your needs
+        $this->addSql('ALTER TABLE accident CHANGE accident_date accident_date VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
+        $this->addSql('ALTER TABLE insurance CHANGE insurance_date insurance_date VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`, CHANGE insurance_expire insurance_expire VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
+        $this->addSql('ALTER TABLE maintenance CHANGE maintenance_date maintenance_date VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
+        $this->addSql('ALTER TABLE technique CHANGE date_visite date_visite VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`, CHANGE technique_expire technique_expire VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
+    }
+}
